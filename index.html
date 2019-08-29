@@ -21,43 +21,54 @@ role-tables:
 ---
 
 <div class="jumbotron">
-    <p>
-        The <b>Awesome Research Group</b> at <b>Example U</b> does all sorts of
-        research. Here is a place where we tell you exactly what that is!
-    </p>
+  <h1>The Accounting and Business Analytics Lab (ABAL)</h1>
+
+  <p>Changes in data and technology are disrupting the work paradigms of many professions, including academics. In this evolving landscape, some researchers prefer to continue working with traditional information sets and methods. Others see it as an opportunity to explore new ways to look at the world but lack the skills and knowledge to navigate emerging technology. The ABAL was created as a collaborative option for these researchers. As a co-author on your project, I will provide a comprehensive service of identifying appropriate datasets, performing advanced analytics, and preparing manuscript outputs. Together we can harness innovation in order to advance knowledge.</p>
+    
+  <p>Contact me at <a href="mailto:researchlab@iCloud.com" >researchlab@iCloud.com</a> for more information.</p>
+    
+  <p>My team is comprised of Faculty, PhD students, Masters Students, and Research Assistants.<br>
+    Our backgrounds are business faculty, corporate professionals, data scientists, and statisticians.<br>
+    Our datasets include public and proprietary, small or big data, static or streaming, and simulated data.<br>
+    Our analytical tools cover all analytic methods from textual analysis to artificial intelligence; including data scrubbing, and simulations.
+  </p>
 </div>
 
-<section>
-    <h2>News</h2>
-    <ul class="news list-unstyled">
-        {% for post in site.posts limit: site.front_page_news %}
-            {% include news-item.html item=post %}
-        {% endfor %}
-    </ul>
-    {% assign numposts = site.posts | size %}
-    {% if numposts >= 1 %}
-        <p>
-            <span class="fa fa-fw fa-history"></span>
-            <a href="{{ site.base }}/blog.html">Older posts&hellip;</a>
-        </p>
-    {% endif %}
-</section>
+<!-- TODO: uncomment when _posts/ folder has content
+     <section>
+     <h2>News</h2>
+     <ul class="news list-unstyled">
+     {% for post in site.posts limit: site.front_page_news %}
+     {% include news-item.html item=post %}
+     {% endfor %}
+     </ul>
+     {% assign numposts = site.posts | size %}
+     {% if numposts >= 1 %}
+     <p>
+     <span class="fa fa-fw fa-history"></span>
+     <a href="{{ site.base }}/blog.html">Older posts&hellip;</a>
+     </p>
+     {% endif %}
+     </section>
+   -->
 
-<section>
-    <h2>Research</h2>
-    <div class="card-columns">
-        {% comment %}
-        Sort the projects by date, putting those without dates last
-        {% endcomment %}
-        {% assign projects_by_date = site.projects | sort: 'last-updated', 'first' %}
-        {% assign projects_by_date = projects_by_date | reverse %}
-        {% for p in projects_by_date %}
-            {% if p.status != "inactive" %}
-                {% include project-card.html project=p %}
-            {% endif %}
-        {% endfor %}
-    </div>
-</section>
+<!-- TODO: uncomment when _projects/ folder has content
+     <section>
+     <h2>Research</h2>
+     <div class="card-columns">
+     {% comment %}
+     Sort the projects by date, putting those without dates last
+     {% endcomment %}
+     {% assign projects_by_date = site.projects | sort: 'last-updated', 'first' %}
+     {% assign projects_by_date = projects_by_date | reverse %}
+     {% for p in projects_by_date %}
+     {% if p.status != "inactive" %}
+     {% include project-card.html project=p %}
+     {% endif %}
+     {% endfor %}
+     </div>
+     </section>
+   -->
 
 <div id="people">
     <h2>People</h2>
